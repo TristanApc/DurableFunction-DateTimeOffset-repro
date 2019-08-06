@@ -36,7 +36,7 @@ namespace Orchestrator
         [FunctionName("Function2_Hello")]
         public static void SayHello([ActivityTrigger] DateTimeOffset myDateTimeOffset, ILogger log)
         {
-            log.LogError($"Activity received {myDateTimeOffset}.");
+            log.LogError($"Activity received value with a different offset: {myDateTimeOffset}.");
         }
 
         [FunctionName("HttpTrigger")]
